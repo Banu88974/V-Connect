@@ -84,7 +84,7 @@ let ChangePassword:React.FC<IProps> = () =>
   
     
     useEffect(() => {
-        let dataURL: string = `http://127.0.0.1:5000/connect/user/`
+        let dataURL: string = `https://connectv.herokuapp.com/connect/user/`
 
         axios.get(dataURL).then((response: AxiosResponse<any>) => {
             setUserState(
@@ -103,7 +103,7 @@ let ChangePassword:React.FC<IProps> = () =>
 
     let submitUpdatedUser = (event:React.FormEvent<HTMLFormElement>)=>
     {
-        let dataURL = `http://127.0.0.1:5000/connect/user/changePassword`
+        let dataURL = `https://connectv.herokuapp.com/connect/user/changePassword`
 
         axios.put(dataURL,userState.user)
             .then((response: AxiosResponse<any>) => {
