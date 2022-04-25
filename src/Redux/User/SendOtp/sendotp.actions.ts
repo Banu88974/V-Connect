@@ -15,7 +15,7 @@ export const registerUser = (email:Email,history:any) => {
         try
         {
             dispatch({type:SENDOTP_REQUEST});
-            let dataURL: string = "http://127.0.0.1:5000/connect/otp/sendOTP";
+            let dataURL: string = "https://connectv.herokuapp.com/connect/otp/sendOTP";
             let response = await axios.post(dataURL,email)
             dispatch({ type: SENDOTP_SUCCESS, payload: response.data });
          
