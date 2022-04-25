@@ -75,7 +75,7 @@ export const uploadPosts = (posts:IPost,history:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/images/upload";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/images/upload";
                 let response = await axios.post(dataURL,posts);
                 dispatch({type:UPLOAD_POST_SUCCESS,payload:response.data});
                 history.push("/connect/profile");
@@ -101,7 +101,7 @@ export const getPosts = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/images/profile";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/images/profile";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_POSTS_SUCCESS,payload:response.data});
             }
@@ -125,7 +125,7 @@ export const getAllPosts = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/images/";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/images/";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_ALL_POSTS_SUCCESS,payload:response.data});
             }
@@ -150,7 +150,7 @@ export const getAllUsers = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/user/allusers";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/user/allusers";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_ALL_USERS_SUCCESS,payload:response.data});
             }
@@ -174,7 +174,7 @@ export const followUser = (followId:string) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/follow/${followId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/follow/${followId}`;
                 let response = await axios.put(dataURL);
                 dispatch({type:FOLLOW_SUCCESS,payload:response.data});
             }
@@ -198,7 +198,7 @@ export const unFollowUser = (followId:string) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/unfollow/${followId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/unfollow/${followId}`;
                 let response = await axios.delete(dataURL);
                 dispatch({type:UNFOLLOW_SUCCESS,payload:response.data});
             }
@@ -222,7 +222,7 @@ export const searchUsers = (user:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/user/search`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/user/search`;
                 let response = await axios.post(dataURL,user);
                 dispatch({type:SEARCH_USER_SUCCESS,payload:response.data});
             }
@@ -246,7 +246,7 @@ export const getUserById = (userId:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/user/${userId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/user/${userId}`;
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_USER_BY_ID_SUCCESS,payload:response.data});
             }
@@ -270,7 +270,7 @@ export const getFollowersById = (userId:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/followers/${userId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/followers/${userId}`;
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_FOLLOWERS_BY_ID_SUCCESS,payload:response.data});
             }
@@ -294,7 +294,7 @@ export const getFollowingById = (userId:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/following/${userId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/following/${userId}`;
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_FOLLOWING_BY_ID_SUCCESS,payload:response.data});
             }
@@ -318,7 +318,7 @@ export const getImagesById = (userId:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/images/${userId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/images/${userId}`;
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_IMAGES_BY_ID_SUCCESS,payload:response.data});
             }
@@ -343,7 +343,7 @@ export const updateUser = (updatedUser:any,history:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/user/updateProfile`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/user/updateProfile`;
                 let response = await axios.put(dataURL,updatedUser);
                 dispatch({type:UPDATE_USER_SUCCESS,payload:response.data});
                 dispatch(alertActions.setAlert(response.data.msg,"success"));
@@ -372,7 +372,7 @@ export const postComments = (postComments:any,commentId:string) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/comments/post/${commentId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/comments/post/${commentId}`;
                 let response = await axios.post(dataURL,postComments);
                 dispatch({type:POST_COMMENTS_SUCCESS,payload:response.data});
  
@@ -397,7 +397,7 @@ export const getComments = (commentId:string) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = `http://127.0.0.1:5000/connect/comments/get/${commentId}`;
+                let dataURL: string = `https://connectv.herokuapp.com/connect/comments/get/${commentId}`;
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_COMMENTS_SUCCESS,payload:response.data});
                 history.push(`/connect/comments/${commentId}`);
