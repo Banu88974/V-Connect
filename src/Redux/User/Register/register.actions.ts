@@ -12,7 +12,7 @@ export const registerUser = (user:IUser,history:any) => {
         dispatch({type:REGISTER_REQUEST});
         try
         {
-            let dataURL: string = "http://127.0.0.1:5000/connect/user/register";
+            let dataURL: string = "https://connectv.herokuapp.com/connect/user/register";
             let response = await axios.post(dataURL,user)
             dispatch({ type: REGISTER_SUCCESS, payload: response.data });
             dispatch(alertActions.setAlert(response.data.msg,"success"));
