@@ -58,7 +58,7 @@ let UpdateProfile:React.FC<IProps> = () =>
         if(AuthUtil.isLoggedin()) {
             let token = AuthUtil.getToken();
             TokenUtil.setTokenHeader(token);
-            let dataURL: string = `http://127.0.0.1:5000/connect/user/`
+            let dataURL: string = `https://connectv.herokuapp.com/connect/user/`
             axios.get(dataURL).then((response: AxiosResponse<any>) => {
             setUserState(
                 {
@@ -77,7 +77,7 @@ let UpdateProfile:React.FC<IProps> = () =>
 
     let submitUpdatedUser = (event:React.FormEvent<HTMLFormElement>)=>
     {
-        let dataURL = `http://127.0.0.1:5000/connect/user/updateProfile`
+        let dataURL = `https://connectv.herokuapp.com/connect/user/updateProfile`
 
         axios.put(dataURL,userState.user)
             .then((response: AxiosResponse<any>) => {
