@@ -15,7 +15,7 @@ export const registerUser = (otp:OTP,history:any) => {
         try
         {
             dispatch({type:VALIDATEOTP_REQUEST});
-            let dataURL: string = "http://127.0.0.1:5000/connect/otp/validateOTP";
+            let dataURL: string = "https://connectv.herokuapp.com/connect/otp/validateOTP";
             let response = await axios.post(dataURL,otp)
             dispatch({ type: VALIDATEOTP_SUCCESS, payload: response.data });
             if(response.data.msg !== "otp was incorrect")
