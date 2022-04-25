@@ -40,7 +40,7 @@ export const loginUser = (user:User,history:any) => {
         dispatch({type:LOGIN_REQUEST});
         try
         {
-            let dataURL: string = "http://127.0.0.1:5000/connect/user/login";
+            let dataURL: string = "https://connectv.herokuapp.com/connect/user/login";
             let response = await axios.post(dataURL,user);
             if(response.status == 200) {
                 dispatch({ type: LOGIN_SUCCESS, payload: response.data});
@@ -78,7 +78,7 @@ export const getUserInfo = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/user/";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/user/";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_USERINFO_SUCCESS,payload:response.data});    
             }
@@ -101,7 +101,7 @@ export const updateProfile = (user:IUser,history:any) =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/user/updateProfilePhoto";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/user/updateProfilePhoto";
                 let response = await axios.put(dataURL,user);
                 if(response.status == 200) {
                     dispatch({type:UPDATE_PROFILE_SUCCESS,payload:response.data});
@@ -131,7 +131,7 @@ export const getFollowersInfo = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/followers/";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/followers/";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_FOLLOWERS_SUCCESS,payload:response.data});
             }
@@ -153,7 +153,7 @@ export const getFollowingInfo = () =>
             {
                 let token = AuthUtil.getToken();
                 TokenUtil.setTokenHeader(token);
-                let dataURL: string = "http://127.0.0.1:5000/connect/following/";
+                let dataURL: string = "https://connectv.herokuapp.com/connect/following/";
                 let response = await axios.get(dataURL);
                 dispatch({type:GET_FOLLOWING_SUCCESS,payload:response.data});    
             }
