@@ -1,0 +1,46 @@
+#forgot
+{
+    margin-left: 75% !important;
+    margin-top: -6%;
+    text-decoration: underline;
+}
+input[type="text"],input[type="password"]
+{
+    border: none;
+    border-bottom: 2px solid rgb(31, 28, 28);
+}
+@media (max-width:575px)
+{
+    #forgot
+    {
+        margin-left: 55% !important;
+        margin-top: -12%;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px)
+{
+    #forgot
+    {
+        margin-left: 60% !important;
+        margin-top: -12%;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    #forgot
+    {
+        margin-left: 65% !important;
+        margin-top: -10%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    #forgot
+    {
+        margin-left: 70% !important;
+        margin-top: -10%;
+    }
+}
+

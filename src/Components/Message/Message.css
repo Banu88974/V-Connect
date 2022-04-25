@@ -1,0 +1,80 @@
+.sender
+{
+    margin-left: 400px!important;
+    width:400px!important;
+}
+.receiver
+{
+    margin-left: 40px!important;
+    width:400px!important;
+}
+
+@media (max-width:575px)
+{
+    .sender
+    {
+        margin-left: 140px!important;
+        width:300px!important;
+    }
+    .receiver
+    {
+        margin-left: 0px!important;
+        width:300px!important;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px)
+{
+    .sender
+    {
+        margin-left: 180px!important;
+        width:300px!important;
+    }
+    .receiver
+    {
+        margin-left: 0px!important;
+        width:300px!important;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    .sender
+    {
+        margin-left: 200px!important;
+        width:300px!important;
+    }
+    .receiver
+    {
+        margin-left: 10px!important;
+        width:300px!important;
+    }
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    .sender
+    {
+        margin-left: 200px!important;
+        width:300px!important;
+    }
+    .receiver
+    {
+        margin-left: 10px!important;
+        width:300px!important;
+    }
+}
+@media (min-width:1200px)
+{
+    .sender
+    {
+        margin-left: 200px!important;
+        width:300px!important;
+    }
+    .receiver
+    {
+        margin-left: 10px!important;
+        width:300px!important;
+    }
+}
+
+

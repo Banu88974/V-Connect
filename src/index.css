@@ -1,0 +1,18 @@
+body
+{
+   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJGYIAFHgX3a4In5ULPuyGZy3rLDxuFVPdw&usqp=CAU); 
+    background-size: cover;    
+}
+input
+{
+    outline:none;
+}
+nav
+{
+  position: fixed;
+  top: 0px;
+}
+#containerMain
+{
+    margin-top: 120px;
+}

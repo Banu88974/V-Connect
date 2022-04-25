@@ -1,0 +1,40 @@
+#resend
+{
+    margin-left: 70%;
+    margin-top: -6.8%;
+}
+
+@media (max-width:575px)
+{
+    #resend
+    {
+        margin-left: 55% !important;
+        margin-top: -9%;
+    }
+    
+}
+@media (min-width:576px) and (max-width:767px)
+{
+    #resend
+    {
+        margin-left: 60% !important;
+        margin-top: -8%;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    #resend
+    {
+        margin-left: 60% !important;
+        margin-top: -8%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    #resend
+    {
+        margin-left: 60% !important;
+        margin-top: -10%;
+    }
+}

@@ -1,0 +1,49 @@
+#login
+{
+    margin-left:55% !important;
+    margin-top: -6%;
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="date"]
+{
+    border: none;
+    border-bottom: 2px solid rgb(31, 28, 28);
+}
+.container select
+{
+        border: none;
+        border-bottom: 2px solid rgb(31, 28, 28);
+}
+
+@media (max-width:575px)
+{
+    #login
+    {
+        margin-left: 30% !important;
+        margin-top: 1%;
+    }
+}
+@media (min-width:576px) and (max-width:767px)
+{
+    #login
+    {
+        margin-left: 40% !important;
+        margin-top: -9%;
+    }
+}
+@media (min-width:768px) and (max-width:991px)
+{
+    #login
+    {
+        margin-left: 45% !important;
+        margin-top: -9%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px)
+{
+    #login
+    {
+        margin-left: 50% !important;
+        margin-top: -9%;
+    }
+}
